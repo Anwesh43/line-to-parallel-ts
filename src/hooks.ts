@@ -75,7 +75,7 @@ export const useStyle = (w : number, h : number, scale : number) => {
             }
         }, 
         lineStyle(i : number) : CSSProperties {
-            const top = `${-size * 0.5 * (1 - 2 * i)}px`
+            const top = `${-size * 0.5 * (1 - 2 * i) * sf1}px`
             const left = `${-size / 2}px`
             const width = `${size}px`
             const height = `${Math.min(w, h) / 80}px`

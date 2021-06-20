@@ -11,9 +11,12 @@ interface LTPProps {
 const LineToParallel : React.FC<LTPProps> = (props : LTPProps) => {
     const {parentStyle, lineStyle} = useStyle(props.w, props.h, props.scale)
     return (
-        <div style = {parentStyle()}>
-            {[0, 1].map((i : number) =>(<div key = {`line_${i}`} style = {lineStyle(i)}></div>))}
-        </div>
+        <React.Fragment>
+            <button onClick = {() => props.onClick()}>LineToParallel</button>
+            <div style = {parentStyle()}>
+                {[0, 1].map((i : number) =>(<div key = {`line_${i}`} style = {lineStyle(i)}></div>))}
+            </div>
+        </React.Fragment>
     )
 }
 
