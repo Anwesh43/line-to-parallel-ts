@@ -54,7 +54,7 @@ const maxScale = (scale : number, i : number, n : number) : number => Math.max(0
 const divideScale = (scale : number, i : number, n : number) : number => Math.min(1 / n, maxScale(scale, i, n)) * n 
 const sinify = (scale : number) : number => Math.sin(scale * Math.PI)
 
-const useStyle = (w : number, h : number, scale : number) => {
+export const useStyle = (w : number, h : number, scale : number) => {
     const sf : number = sinify(scale)
     const sf1 : number = divideScale(sf, 0, 2)
     const sf2 : number = divideScale(sf, 1, 2)
